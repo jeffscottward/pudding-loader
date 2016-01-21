@@ -13,14 +13,7 @@ module.exports = function(compiledSolObj) {
 
 		var inputCompiled = compiledSolObj.contracts[contractName];
 		
-		var contractInterface   = inputCompiled.interface;
-		var contractBytecode    = inputCompiled.bytecode;
-
-		var whiskyInfo = Pudding.whisk(contractInterface, contractBytecode);
-
-		whiskyInfo.load(Pudding);
-
-	 	classContracts += PuddingGenerator.generate(contractName, whiskyInfo);
+	 	classContracts += PuddingGenerator.generate(contractName, inputCompiled);
 	}
 
 	return classContracts; 
