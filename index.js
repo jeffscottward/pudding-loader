@@ -1,3 +1,4 @@
+var Pudding = require('ether-pudding');
 var PuddingGenerator = require('ether-pudding/generator');
 
 module.exports = function(compiledSolObj) { 
@@ -8,12 +9,16 @@ module.exports = function(compiledSolObj) {
 	
 	for (var contractName in compiledSolObj.contracts){
 
-		var compiledSolObj = inputCompiled.contracts[contractName];
+		console.log(contractName);
+
+		var inputCompiled = compiledSolObj.contracts[contractName];
 		
-		var contractInterface   = compiledSolObj.interface;
-		var contractBytecode    = compiledSolObj.bytecode;
+		var contractInterface   = inputCompiled.interface;
+		var contractBytecode    = inputCompiled.bytecode;
 
 		var whiskyInfo = Pudding.whisk(contractInterface, contractBytecode);
+
+		whiskyInfo.load(Pudding);
 
 	 	classContracts += PuddingGenerator.generate(contractName, whiskyInfo);
 	}
