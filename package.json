@@ -1,0 +1,28 @@
+{
+  "name": "pudding-loader",
+  "version": "0.0.1",
+  "description": "Pudding loader for Webpack to call solidity contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffscottward/pudding-loader.git"
+  },
+  "keywords": [
+    "Pudding",
+    "Ethereum",
+    "Solidity",
+    "Javascript"
+  ],
+  "author": "jeffscottward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffscottward/pudding-loader/issues"
+  },
+  "homepage": "https://github.com/jeffscottward/pudding-loader#readme",
+  "devDependencies": {
+    "ether-pudding": "^1.1.1"
+  }
+}
